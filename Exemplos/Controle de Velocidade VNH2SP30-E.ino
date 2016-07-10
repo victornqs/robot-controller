@@ -10,22 +10,20 @@
     //input nilai PWM 
     int PWMDireita_val = 127; //(25% = 64; 50% = 127; 75% = 191; 100% = 255)
 
-    void setup() {
-   
-    pinMode(InADireita, OUTPUT);
-    pinMode(InBDireita, OUTPUT);
-    pinMode(PWMDireita, OUTPUT);
+    void setup() {   
+    	pinMode(InADireita, OUTPUT);
+    	pinMode(InBDireita, OUTPUT);
+    	pinMode(PWMDireita, OUTPUT);
     }
 
     void loop() {
-    //arah motor CW  
-    digitalWrite(InADireita, HIGH);
-    digitalWrite(InBDireita, LOW);
-    analogWrite(PWMDireita, PWMDireita_val);
+    	//arah motor CW  
+    	digitalWrite(InADireita, HIGH);
+    	digitalWrite(InBDireita, LOW);
+    	analogWrite(PWMDireita, PWMDireita_val);
     
-    //arah motor CCW 
-    //digitalWrite(InADireita, LOW);
-    //digitalWrite(InBDireita, HIGH);
-    //analogWrite(PWMDireita, PWMDireita_val);
-    
+    	//arah motor CCW 
+    	//digitalWrite(InADireita, LOW);
+    	//digitalWrite(InBDireita, HIGH);
+    	//analogWrite(PWMDireita, PWMDireita_val);    
     }
