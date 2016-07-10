@@ -1,4 +1,4 @@
-
+//Leitura de 1 canal por RC
 int Canal01 = 7;
 
 unsigned long RCanal01;
