@@ -1,3 +1,4 @@
+//Teste de acionamento relé por RC via Turnigy 9X
 //Turnigy
 int Canal01 = 22;
 int Canal02 = 24;
@@ -28,9 +29,9 @@ int canal8 = 3;
 
 void setup ()
 {
- 
+
   Serial.begin(9600);
-  
+
   //Define pinos para o rele como saida
   pinMode(canal3, OUTPUT);
   pinMode(canal4, OUTPUT);
@@ -83,31 +84,31 @@ void loop()
   RCanal09 = map(RCanal09,1000,2000,0,10);
 
   Serial.print("RCanal01: ");
-  Serial.println(RCanal01);  
+  Serial.println(RCanal01);
 
   Serial.print("RCanal03: ");
   Serial.println(RCanal03);*/
   delay(500);
-    
-  if ((RCanal03 > 3.0) and ((RCanal01 >= 4.0) and (RCanal01 <= 6.0))) {    
+
+  if ((RCanal03 > 3.0) and ((RCanal01 >= 4.0) and (RCanal01 <= 6.0))) {
     digitalWrite(canal3, HIGH);
     digitalWrite(canal4, HIGH);
     digitalWrite(canal5, HIGH);
-    digitalWrite(canal8, HIGH); 
+    digitalWrite(canal8, HIGH);
   } else {
 
-    if ((RCanal03 > 3.0) and ((RCanal01 <= 3.0) or (RCanal01 >= 7.0))) {    
+    if ((RCanal03 > 3.0) and ((RCanal01 <= 3.0) or (RCanal01 >= 7.0))) {
       digitalWrite(canal3, HIGH);
       digitalWrite(canal4, HIGH);
       /*digitalWrite(canal6, HIGH);
       digitalWrite(canal7, HIGH);*/
-    } else {    
+    } else {
       digitalWrite(canal3, LOW);
       digitalWrite(canal4, LOW);
       digitalWrite(canal5, LOW);
       digitalWrite(canal6, LOW);
       digitalWrite(canal7, LOW);
-      digitalWrite(canal8, LOW); 
-    }    
+      digitalWrite(canal8, LOW);
+    }
   }
 }
